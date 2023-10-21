@@ -2,7 +2,7 @@
 
 a self-hosted Real-Debrid webdav server written from scratch, alternative to rclone_rd
 
-## NOTE: zurg-1000 has a 1000 item limit on libraries and will only be provided as a container image
+## NOTE: zurg-1000 has a 1000 item limit on libraries and will only be provided as a container image. It is only meant for testing zurg. Development will end at v1.0. Access to the full version will be provided on a later date.
 
 ## config.yml
 
