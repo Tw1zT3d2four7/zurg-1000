@@ -79,7 +79,7 @@ directories:
 ### Standalone webdav server
 
 ```bash
-docker run -v ./config.yml:/app/config.yml -v zurgdata:/app/data -p 9999:9999 ghcr.io/debridmediamanager/zurg-1000:latest
+docker run -v ./config.yml:/app/config.yml -v zurgdata:/app/data -p 9999:9999 ghcr.io/debridmediamanager/zurg-1000:main
 ```
 
 - Runs zurg on port 9999 on your localhost
@@ -95,7 +95,7 @@ version: '3.8'
 
 services:
   zurg:
-    image: ghcr.io/debridmediamanager/zurg-1000:latest
+    image: ghcr.io/debridmediamanager/zurg-1000:main
     restart: unless-stopped
     ports:
       - 9999:9999
@@ -104,7 +104,7 @@ services:
       - zurgdata:/app/data
 
   rclone:
-    image: rclone/rclone:latest
+    image: rclone/rclone:main
     restart: unless-stopped
     environment:
       TZ: Europe/Berlin
