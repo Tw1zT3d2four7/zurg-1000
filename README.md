@@ -2,6 +2,16 @@
 
 a self-hosted Real-Debrid webdav server written from scratch, alternative to rclone_rd
 
+## Why zurg? Why not rclone_rd? Why not Real-Debrid's own webdav?
+
+- Listing all your torrent directories: 700% to 5000% faster (without rclone caching)
+- Opening a torrent folder and listing files: 10% to 250% faster
+- You should be able to access every file even if the torrent names are the same (e.g. 2 torrents named "Simpsons" but have different seasons, zurg merges all contents in that directory)
+- Organize your library in directories you want, you can select individual torrents that should appear on a directory by the ID you see in [DMM](https://debridmediamanager.com/)
+- If you've ever experienced Plex scanner being stuck on a file and thereby freezing Plex completely, it should not happen anymore.
+
+The performance benchmarks are done on my own but feel free to validate these numbers
+
 ## NOTE: zurg-1000 has a 1000 item limit on libraries and will only be provided as a container image. It is only meant for testing zurg. Development will end at v1.0. Access to the full version will be provided on a later date.
 
 ## config.yml
